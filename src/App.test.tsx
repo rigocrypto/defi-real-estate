@@ -18,7 +18,13 @@ vi.mock('../wagmi', () => ({
 describe('App render', () => {
   it('renders home content without crashing', () => {
     render(
-      <MemoryRouter initialEntries={['/']}>
+      <MemoryRouter
+        initialEntries={['/']}
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <App />
       </MemoryRouter>
     )

@@ -7,5 +7,6 @@ class MockIntersectionObserver {
 }
 
 if (!globalThis.IntersectionObserver) {
-	globalThis.IntersectionObserver = MockIntersectionObserver
+	globalThis.IntersectionObserver =
+		MockIntersectionObserver as unknown as typeof IntersectionObserver
 }
