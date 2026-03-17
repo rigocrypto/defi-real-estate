@@ -20,24 +20,39 @@ A decentralized real estate platform built with React, Vite, and Web3 technologi
 ### Installation
 
 1. Clone the repository
+2. Create a local env file:
+   ```bash
+   copy .env.example .env
+   ```
+3. Set your WalletConnect project ID in `.env`
 2. Install dependencies:
    ```bash
-   npm install
+   npm ci
    ```
 
-3. Start the development server:
+4. Start the development server:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Environment Variables
+
+- `VITE_WALLETCONNECT_PROJECT_ID` - required for RainbowKit / WalletConnect integration
+- `VITE_ENABLE_TESTNETS` - set to `true` to include Sepolia in the wagmi chain list
+- `PORT` - optional Express server port override; defaults to `5025`
 
 ## Available Scripts
 
-- `npm run dev` - Start development server
+- `npm run dev` - Start frontend development server (Vite on port 3000)
+- `npm run server` - Start the Express API server (port 5025)
+- `npm run dev:full` - Start frontend and backend in parallel
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
+- `npm run typecheck` - Run TypeScript checks with no emit
+- `npm run test:run` - Run tests once in CI mode
 
 ## Tech Stack
 
