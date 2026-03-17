@@ -10,7 +10,7 @@ import {
 
 export const config = getDefaultConfig({
   appName: 'DeFi Real Estate',
-  projectId: 'YOUR_PROJECT_ID',
+  projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || 'YOUR_PROJECT_ID',
   chains: [
     mainnet,
     polygon,
